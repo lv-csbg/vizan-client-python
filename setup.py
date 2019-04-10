@@ -15,7 +15,7 @@ with open(path.join(HERE, 'vizan_client/__init__.py'), 'r') as f:
 with open(path.join(HERE, 'README.rst'), encoding='utf-8') as f:
     LONG_DESC = f.read()
 
-REQUIRES = []
+REQUIRES = ['cobra', 'pandas', 'requests']
 
 setup(
     name='vizan-client-python',

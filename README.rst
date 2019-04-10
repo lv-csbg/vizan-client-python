@@ -15,6 +15,17 @@ Python 2.7/3.5+ and PyPy.
 
     $ pip install vizan-client-python
 
+Usage
+-------------
+
+.. code-block:: python
+
+    from vizan_client import visualise
+    model_filename = 'data/iML1515.json'
+    svg_filename = 'data/E_coli_source.svg'
+    output_filename = 'FBA_result.svg'
+    visualise(model_filename, svg_filename, output_filename, analysis_type='FBA')
+
 Development
 -----------
 
