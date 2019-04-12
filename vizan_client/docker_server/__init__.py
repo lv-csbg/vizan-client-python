@@ -2,7 +2,7 @@ from subprocess import Popen, PIPE
 from os import path, getcwd, chdir, getpgid, waitpid
 from sys import platform
 import logging
-
+import time
 HERE = path.abspath(path.dirname(__file__))
 module_logger = logging.getLogger('vizan_client.docker_server')
 
@@ -24,6 +24,7 @@ class LocalServer(object):
                 self.logger.warning("WARNING: The user is not in the 'docker' group. "
                                     "Most likely it does not have rights to run docker")
         self.process = Popen(cmd, shell=False, **std_kwargs)
+        time.sleep(20)
         chdir(self.cwd)
 
     def __del__(self):
