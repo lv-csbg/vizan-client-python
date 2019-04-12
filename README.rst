@@ -15,8 +15,27 @@ Python 2.7/3.5+ and PyPy.
 
     $ pip install vizan-client-python
 
+Local Web server
+________________
+
+For local server you need to install docker and perform post-installation steps on Linux
+Then you need to download the image.
+
+.. code-block:: bash
+
+    $ docker pull lvcsbg/tools:vizan-webserver
+
+And run Local server
+
+.. code-block:: python
+
+    from vizan_client import LocalServer
+    local_server = LocalServer()
+
 Usage
 -------------
+
+With Local Server running no need to provide url, so :
 
 .. code-block:: python
 
@@ -42,3 +61,4 @@ License
 
 vizan-client-python is distributed under the terms of `GPL v3 License <https://choosealicense.com/licenses/gpl-3.0/>`_
 
+docker_server module is also distributed under the terms of `MIT License <https://choosealicense.com/licenses/mit/>`_

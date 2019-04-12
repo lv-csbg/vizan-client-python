@@ -48,4 +48,5 @@ setup(
     tests_require=['coverage', 'pytest'],
 
     packages=find_packages(exclude=['docs', 'tests']),
+    include_package_data=True
 )

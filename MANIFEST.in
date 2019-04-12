@@ -1,2 +1,4 @@
 include README.rst
 include LICENSE
+include vizan_client/docker_server/*
+include vizan_client/docker_server/config/*/*
