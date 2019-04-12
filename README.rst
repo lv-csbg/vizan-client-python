@@ -18,14 +18,14 @@ Python 2.7/3.5+ and PyPy.
 Local Web server
 ________________
 
-For local server you need to install docker and perform post-installation steps on Linux
-Then you need to download the image.
+For local server you need to install `Docker <https://docs.docker.com/install/>`_ .
+On Linux also you should perform `post-installation steps <https://docs.docker.com/install/linux/linux-postinstall/>`_ .
 
 .. code-block:: bash
 
     $ docker pull lvcsbg/tools:vizan-webserver
 
-And run Local server
+And to run local server:
 
 .. code-block:: python
 
@@ -35,7 +35,7 @@ And run Local server
 Usage
 -------------
 
-With Local Server running no need to provide url, so :
+With local server running no need to provide url, so :
 
 .. code-block:: python
 
