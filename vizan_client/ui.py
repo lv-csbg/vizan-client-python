@@ -1,9 +1,8 @@
 from __future__ import absolute_import
 import json
 import requests
-import tempfile
 from .json_utils import CobraSolutionEncoder
-from io import open
+from io import open, StringIO
 import time
 
 
@@ -18,9 +17,7 @@ def visualise(model_filename, svg_filename, output_filename, analysis_type='FBA'
             results_json = analysis_results.to_json()
         else:
             raise ValueError("analysis_type must be either 'FBA' or 'FVA'")
-        results_file = tempfile.SpooledTemporaryFile(max_size=10*1024*1024)
-        results_file.write(results_json.encode("utf-8"))
-        results_file.seek(0)
+        results_file = StringIO(results_json)
     else:
         results_file = None
     files = {
